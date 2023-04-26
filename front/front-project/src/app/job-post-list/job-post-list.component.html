@@ -1,0 +1,47 @@
+<div class="post-list">
+  <button type="button" *ngIf="isEmployer" (click)="showForm()">Create new job post</button>
+  <div class="job-post-container">
+    <div *ngFor="let j of jobPosts" class="job-post">
+      <a [routerLink]="['/job-posts/', j.id]" [queryParams]="{id: this.getIdFromParam(), userType: getUserTypeFromParam()}" class="job-post-link">
+        <h2 class="job-post-title">{{j.title}}</h2>
+      </a>
+      <p class="job-post-salary">{{j.salary}} $</p>
+      <p class="job-post-location">{{j.location}}</p>
+      <p class="job-post-company">Company: {{j.company_name}}</p>
+      <p class="job-post-date">{{j.created_at}}</p>
+      <div class="job-post-buttons">
+        <a href="#" class="job-post-respond"><span>Respond</span></a>
+        <div class="job-post-reactions">
+          <button class="job-post-hide"><i class="fa fa-eye" aria-hidden="true"></i></button>
+          <button class="job-post-like"><i class="fa fa-heart" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="popup-container" *ngIf="isClicked">
+    <div class="popup-content">
+      <div class="close-button">
+        <button (click)="isClicked=!isClicked">&times;</button>
+      </div>
+      <div class="popup-form">
+        <label for="title">Title:</label>
+        <input [(ngModel)]="newJobPost.title" id="title" name="title" type="text" required>
+
+        <label for="description">Description:</label>
+        <textarea [(ngModel)]="newJobPost.description" id="description" name="description" type="text"
+          required></textarea>
+
+        <label for="location">Location:</label>
+        <input [(ngModel)]="newJobPost.location" id="location" name="location" type="text" required>
+
+        <label for="salary">Salary:</label>
+        <input [(ngModel)]="newJobPost.salary" id="salary" name="salary" type="number" required>
+
+        <button type="submit" (click)="createPost()">Create</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+/* Центрирование формы и ее содержимого */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Это будет центрировать форму по вертикали на экране */
+}
+
+
+
+/* Центрирование содержимого формы по горизонтали */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 90%;
+    padding: 15px;
+}
+
+.form-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.form-control {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #f5f5f5;
+    background-clip: padding-box;
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus, .form-control:hover{
+    font-size: 120%;
+    color: #495057;
+    background-color: #fff;
+    border-bottom-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    width: 70%;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #0088cc;
+    border: 1px solid #007bff;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 3.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-group{
+    margin-top: -20px;
+    margin-bottom: 60px;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.btn:hover {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #0088cc;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
+}
+.send-code-btn {
+    color: #0088cc;
+    position: absolute;
+    left: -40px;
+}
+
+.send-code-btn:hover {
+    color: #0056b3;
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
+}
+.resend-code-btn {
+    color: #0088cc;
+    position: absolute;
+    right: -80px;
+}
+
+.resend-code-btn:hover {
+    color: #0056b3;
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
+}

@@ -1,0 +1,13 @@
+<div class="form-container">
+  <form [formGroup]="form" (submit)="submit()" class="form">
+    <div class="form-group">
+      <label for="code" class="form-label">Code:</label>
+      <input formControlName="code" type="text" name="code" id="code" class="form-control" placeholder="Enter code">
+    </div>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-link send-code-btn">Send Code via SMS</button>
+      <button type="button" class="btn btn-link resend-code-btn">Resend Code</button>
+    </div>
+    <button type="submit" class="btn" (click)="submit()">Submit</button>
+  </form>
+</div>

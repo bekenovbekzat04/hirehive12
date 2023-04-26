@@ -1,0 +1,35 @@
+<div class="post-details">
+  <a *ngIf="showDeleteButton" [routerLink]="['/job-posts', jobPost.id, 'applicants']" class="show-applicants-btn"
+    style="float: right; margin: 10px 20px">Show applicants ></a>
+
+  <div class="job-post-details">
+    <h2 class="job-title">{{jobPost.title}}</h2>
+    <h3 class="job-location">{{jobPost.location}}</h3>
+    <p class="company-name">{{jobPost.company_name}}</p>
+    <p class="job-description">{{jobPost.description}}</p>
+    <p class="job-salary">{{jobPost.salary}}</p>
+    <p class="create-time">{{createTime}}</p>
+    <button type="submit" *ngIf="showRespondButton" class="respond-btn" (click)="showForm()">Respond</button>
+  </div>
+
+  <button type="button" *ngIf="showDeleteButton" class="delete-btn" (click)="delete()">Delete</button>
+
+
+
+  <div class="popup-container" *ngIf="showRespondForm">
+    <div class="popup-content">
+      <div class="close-button">
+        <button (click)="showRespondForm=!showRespondForm">&times;</button>
+      </div>
+      <form class="popup-form" [formGroup]="form">
+        <label for="covering_letter">Covering letter:</label>
+        <textarea formControlName="covering_letter" id="covering_letter" name="covering_letter" required></textarea>
+
+        <label for="resume">Resume:</label>
+        <input id="resume" name="resume" type="file" (change)="onResumeSelect($event)">
+
+        <button type="submit" id="popup-respond" (click)="respond()">Respond</button>
+      </form>
+    </div>
+  </div>
+</div>

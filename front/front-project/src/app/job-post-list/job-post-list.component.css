@@ -1,0 +1,198 @@
+.post-list {
+  position: relative;
+  top: 100px;
+}
+
+.job-post-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 -10px;
+
+}
+
+.job-post {
+  width: calc(33.33% - 20px);
+  margin: 0 10px 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.job-post-link {
+  color: #3c9df2;
+  text-decoration: none;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+  outline: none;
+}
+
+.job-post-link:hover {
+  color: red;
+}
+
+.job-post-title {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.job-post-salary,
+.job-post-location,
+.job-post-company,
+.job-post-date {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+
+.job-post-company {
+  font-style: italic;
+}
+
+.job-post-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-post-respond {
+  background-color: #0077FF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-out;
+}
+
+.job-post-respond:hover {
+  background-color: #0066CC;
+}
+
+.job-post-reactions {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.job-post-hide,
+.job-post-like {
+  --bloko-icon-color: #303233;
+  background-color: hsla(0, 0%, 100%, 0);
+  color: #303233;
+  width: 32px;
+  height: 32px;
+  font-weight: Regular;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+}
+
+.job-post-hide img,
+.job-post-like img {
+  width: 20px;
+  height: 20px;
+  --bloko-icon-color: #959799;
+}
+
+.job-post-like img {
+  filter: grayscale(100%);
+  background: transparent;
+  display: inline-block;
+  background: 0 0 no-repeat;
+  vertical-align: middle;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+.job-post-like:hover img {
+  filter: none;
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 50%;
+  max-width: 800px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-button button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="number"],
+.popup-form textarea {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.popup-form input[type="text"]:focus,
+.popup-form input[type="number"]:focus,
+.popup-form textarea:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 119, 255, 0.5);
+}
+
+.popup-form button[type="submit"] {
+  padding: 10px;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.popup-form button[type="submit"]:hover {
+  background-color: #0066cc;
+}
